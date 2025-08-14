@@ -5,24 +5,67 @@
 }
 
 .container {
-  min-height: 100vh; /* पहले height fix थी, अब min-height किया */
+  position: relative;
+  min-height: 100vh; 
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(45deg, #121212, #0e0f0fe8);
-  animation: backgroundMove 6s infinite alternate;
   color: white;
   text-align: center;
-  padding: 40px 20px; /* extra padding ताकि mobile में breathing space मिले */
+  padding: 40px 20px; 
+  overflow: hidden; /* bubble images hide outside */
 }
 
+/* Floating animation upgrade */
+.bubbles img {
+  position: absolute;
+  bottom: -120px;
+  opacity: 0;
+  animation: bubbleFloat 12s linear infinite;
+}
+
+/* Professional float with sway + fade */
+@keyframes bubbleFloat {
+  0% {
+    transform: translateX(0) translateY(0) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(20px) translateY(-50vh) scale(1);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(-15px) translateY(-100vh) scale(0.7);
+    opacity: 0;
+  }
+}
+
+/* Different positions, speeds & sizes */
+.bubbles img:nth-child(1) { left: 5%; width: 40px; animation-delay: 0s; animation-duration: 10s; }
+.bubbles img:nth-child(2) { left: 18%; width: 60px; animation-delay: 3s; animation-duration: 13s; }
+.bubbles img:nth-child(3) { left: 32%; width: 50px; animation-delay: 6s; animation-duration: 11s; }
+.bubbles img:nth-child(4) { left: 50%; width: 70px; animation-delay: 1s; animation-duration: 14s; }
+.bubbles img:nth-child(5) { left: 72%; width: 45px; animation-delay: 4s; animation-duration: 12s; }
+.bubbles img:nth-child(6) { left: 88%; width: 55px; animation-delay: 7s; animation-duration: 15s; }
+
+
+
 .home-content {
+  position: relative;
+  z-index: 2;
   max-width: 900px;
   width: 100%;
 }
 
 .home-content h1 {
-  font-size: clamp(1.8rem, 5vw, 3rem); /* auto adjust font size */
+  font-size: clamp(1.8rem, 5vw, 3rem);
   font-weight: bold;
   opacity: 0;
   animation: fadeIn 1.5s ease-in forwards;
@@ -40,19 +83,8 @@
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes backgroundMove {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .buttons {
@@ -111,33 +143,15 @@
   100% { transform: translateY(0); }
 }
 
-.icons a {
-  display: inline-block;
-}
+.icons a { display: inline-block; }
 
-/* ===== Responsive Media Queries ===== */
+/* ===== Responsive ===== */
 @media screen and (max-width: 768px) {
-  .buttons {
-    gap: 12px;
-  }
-  .btn {
-    padding: 12px 24px;
-    font-size: 0.9rem;
-  }
+  .btn { padding: 12px 24px; font-size: 0.9rem; }
 }
 
 @media screen and (max-width: 480px) {
-  .container {
-    padding: 30px 15px;
-  }
-  .buttons {
-    gap: 10px;
-  }
-  .btn {
-    padding: 10px 20px;
-    font-size: 0.85rem;
-  }
-  .icons {
-    gap: 15px;
-  }
+  .container { padding: 30px 15px; }
+  .btn { padding: 10px 20px; font-size: 0.85rem; }
+  .icons { gap: 15px; }
 }
