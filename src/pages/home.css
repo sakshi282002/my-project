@@ -5,7 +5,7 @@
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh; /* पहले height fix थी, अब min-height किया */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,8 +13,7 @@
   animation: backgroundMove 6s infinite alternate;
   color: white;
   text-align: center;
-  padding: 0 20px;
-  margin-bottom: 80px;
+  padding: 40px 20px; /* extra padding ताकि mobile में breathing space मिले */
 }
 
 .home-content {
@@ -23,7 +22,7 @@
 }
 
 .home-content h1 {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 5vw, 3rem); /* auto adjust font size */
   font-weight: bold;
   opacity: 0;
   animation: fadeIn 1.5s ease-in forwards;
@@ -34,7 +33,7 @@
 }
 
 .home-content p {
-  font-size: 1.2rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
   opacity: 0;
   margin-top: 12px;
   animation: fadeIn 2s ease-in forwards;
@@ -45,7 +44,6 @@
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -53,13 +51,8 @@
 }
 
 @keyframes backgroundMove {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  100% {
-    background-position: 100% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 .buttons {
@@ -96,7 +89,7 @@
 
 .icons i {
   transition: 0.3s;
-  font-size: 32px;
+  font-size: clamp(26px, 4vw, 32px);
   color: white;
   animation: glowPulse 2s infinite;
 }
@@ -122,45 +115,29 @@
   display: inline-block;
 }
 
-/* ========== Responsive Styles ========== */
+/* ===== Responsive Media Queries ===== */
 @media screen and (max-width: 768px) {
-  .home-content h1 {
-    font-size: 2.2rem;
+  .buttons {
+    gap: 12px;
   }
-
-  .home-content p {
-    font-size: 1rem;
-  }
-
   .btn {
     padding: 12px 24px;
     font-size: 0.9rem;
   }
-
-  .icons i {
-    font-size: 28px;
-  }
 }
 
 @media screen and (max-width: 480px) {
-  .home-content h1 {
-    font-size: 1.8rem;
+  .container {
+    padding: 30px 15px;
   }
-
-  .home-content p {
-    font-size: 0.95rem;
+  .buttons {
+    gap: 10px;
   }
-
   .btn {
     padding: 10px 20px;
     font-size: 0.85rem;
   }
-
   .icons {
     gap: 15px;
-  }
-
-  .icons i {
-    font-size: 26px;
   }
 }

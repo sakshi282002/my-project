@@ -43,7 +43,7 @@
 
 .hamburger {
   display: none;
-  font-size: 26px;
+  font-size: 24px; /* छोटा कर दिया */
   color: white;
   cursor: pointer;
   z-index: 20;
@@ -74,9 +74,9 @@
 }
 
 /* ======= Responsive Styling ======= */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .navbar {
-    padding: 20px;
+    padding: 15px 25px;
   }
 
   .hamburger {
@@ -100,7 +100,7 @@
   }
 
   .items li {
-    padding: 15px 0;
+    padding: 12px 0;
     border-top: 1px solid #444;
   }
 
@@ -113,5 +113,23 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .hamburger {
+    font-size: 20px; /* mobile पर और छोटा */
+  }
+
+  .items a {
+    font-size: 0.9rem;
   }
 }

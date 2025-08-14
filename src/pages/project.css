@@ -22,21 +22,22 @@
   box-shadow: 0px 0px 8px rgba(0, 255, 127, 0.7);
 }
 
-/* Default layout */
+/* Grid Layout */
 .projects-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
+  justify-items: center;
 }
 
+/* Card Style */
 .project-card {
   background: #ffffff;
   padding: 20px;
   border-radius: 14px;
   box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
   transition: all 0.3s ease-in-out;
-  width: 90%;
+  width: 100%;
   max-width: 380px;
   height: 450px;
   display: flex;
@@ -96,15 +97,22 @@
   box-shadow: 0px 5px 15px rgba(0, 255, 127, 0.5);
 }
 
-/* Tablet/Desktop view */
-@media (min-width: 768px) {
-  .projects-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .projects-heading {
+    font-size: 2rem;
   }
+}
 
+@media (max-width: 480px) {
+  .projects-heading {
+    font-size: 1.6rem;
+  }
   .project-card {
-    width: 420px;
+    height: auto;
+    padding: 15px;
+  }
+  .project-image {
+    height: 180px;
   }
 }

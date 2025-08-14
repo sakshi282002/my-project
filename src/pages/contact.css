@@ -16,7 +16,6 @@
   text-align: center;
   animation: fadeSlideUp 0.8s ease-in-out forwards;
   opacity: 0;
-  transition: all 0.3s ease;
 }
 
 @keyframes fadeSlideUp {
@@ -52,6 +51,7 @@
   cursor: pointer;
   font-size: 0.9rem;
   margin-top: 10px;
+  transition: background 0.3s ease;
 }
 
 .toggle-btn:hover {
@@ -73,7 +73,7 @@
   border-radius: 10px;
   font-size: 1rem;
   background-color: #fafafa;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-form input:focus,
@@ -118,6 +118,7 @@
 @media (max-width: 768px) {
   .contact-section {
     padding: 40px 30px;
+    margin: 40px 20px;
   }
 
   .contact-header h2 {
@@ -127,25 +128,28 @@
   .contact-header p {
     font-size: 0.95rem;
   }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 0.95rem;
-  }
 }
 
 /* ✅ Mobile View */
 @media (max-width: 480px) {
   .contact-section {
     padding: 30px 20px;
+    margin: 30px 15px;
   }
 
   .contact-header h2 {
     font-size: 1.8rem;
   }
 
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
   .contact-form button {
     font-size: 0.95rem;
+    padding: 10px 14px;
   }
 
   .contact-info {
@@ -157,6 +161,10 @@
 .contact-section.dark {
   background-color: #1e1e1e;
   color: #f5f5f5;
+}
+
+.contact-section.dark .contact-header p {
+  color: #ccc;
 }
 
 .contact-section.dark .contact-form input,
