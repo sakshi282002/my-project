@@ -3,6 +3,7 @@ import '../pages/project.css';
 import cafe from '../assets/cafe.png';
 import food from '../assets/food.png';
 import cal from '../assets/cal.png';
+import weather from '../assets/weather.png';
 
 const projectsData = [
   {
@@ -24,10 +25,10 @@ const projectsData = [
     link: "https://calculater3.netlify.app/"
   },
   {
-    title: "",
+    title: "Simple Weather App",
     description: "Frontend design for an e-commerce store built with HTML, CSS, and React.",
-    image: "",
-    link: ""
+    image: weather,
+    link: "https://cloud-jet-nine.vercel.app/"
   },
   {
     title: "",
@@ -49,6 +50,7 @@ export default function project() {
   return (
     <section className="projects" id="projects">
       <h2 className="projects-heading">My Projects</h2>
+      <div className="underline"></div>
       <div className="projects-grid">
         {projectsData.map((project, index) => (
           <div className="project-card" key={index}>

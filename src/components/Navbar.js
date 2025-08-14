@@ -26,7 +26,7 @@ const Navbar = () => {
                 <li><Link to="/skill" onClick={toggleMenu}><FontAwesomeIcon icon={faBook} className='font-aw' /> Skills </Link></li>
                 <li><Link to="/project" onClick={toggleMenu}><FontAwesomeIcon icon={faBook} className='font-aw' /> Projects</Link></li>
                 <li><Link to="/contact" onClick={toggleMenu}><FontAwesomeIcon icon={faEnvelope} className='font-aw' /> Contact</Link></li>
-                <li><Link to="/services" onClick={toggleMenu}><FontAwesomeIcon icon={faEnvelope} className='font-aw' /> Services</Link></li>
+              
             </ul>
             
             

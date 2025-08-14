@@ -5,7 +5,8 @@
 }
 
 .skills-section {
-  /* background: #2f2f2f; */
+  /* background: #2f2f2f;*/
+    background: linear-gradient(45deg, #121212, #0e0f0fe8);
   color: white;
   padding: 60px 20px;
   text-align: center;

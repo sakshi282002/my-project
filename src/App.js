@@ -6,7 +6,8 @@ import About from './pages/About';
 import Skill from  './pages/Skill';
 import Project from './pages/Project';
 import Contact from './pages/Contact';
-import Services from "./Services";
+import Footer from "./components/Footer";
+
 
 
 
@@ -24,10 +25,13 @@ function App() {
           <Route path="/skill" element={<Skill/>} />
           <Route path="/project" element={<Project/>} />
           <Route path="/contact" element={<Contact/>} />
-          <Route path="/services" element={<Services/>} />
+        
         </Routes>
+       
       </div>
+         <Footer/>
     </Router>
+  
 
   )
 }
