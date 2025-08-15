@@ -1,3 +1,10 @@
+/* Scrollbar remove for all devices */
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .footer {
   background: linear-gradient(45deg, #121212, #0e0f0fe8);
   color: #e0e0e0;
@@ -6,6 +13,8 @@
   text-align: center;
   border-top: 1px solid #2a2a2a;
   animation: fadeInFooter 0.8s ease-in-out;
+  width: 100%; /* ensure full width, no overflow */
+  box-sizing: border-box; /* avoid padding overflow */
 }
 
 @keyframes fadeInFooter {
