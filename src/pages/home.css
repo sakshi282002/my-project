@@ -14,18 +14,20 @@
   color: white;
   text-align: center;
   padding: 40px 20px; 
-  overflow: hidden; /* bubble images hide outside */
+  overflow: hidden; 
 }
 
-/* Floating animation upgrade */
 .bubbles img {
   position: absolute;
   bottom: -120px;
   opacity: 0;
   animation: bubbleFloat 12s linear infinite;
+  max-width: 60px; /* sabka max size fix */
+  height: auto; /* aspect ratio maintain */
 }
 
-/* Professional float with sway + fade */
+
+
 @keyframes bubbleFloat {
   0% {
     transform: translateX(0) translateY(0) scale(0.8);
@@ -48,12 +50,12 @@
 }
 
 /* Different positions, speeds & sizes */
-.bubbles img:nth-child(1) { left: 5%; width: 40px; animation-delay: 0s; animation-duration: 10s; }
-.bubbles img:nth-child(2) { left: 18%; width: 60px; animation-delay: 3s; animation-duration: 13s; }
-.bubbles img:nth-child(3) { left: 32%; width: 50px; animation-delay: 6s; animation-duration: 11s; }
-.bubbles img:nth-child(4) { left: 50%; width: 70px; animation-delay: 1s; animation-duration: 14s; }
-.bubbles img:nth-child(5) { left: 72%; width: 45px; animation-delay: 4s; animation-duration: 12s; }
-.bubbles img:nth-child(6) { left: 88%; width: 55px; animation-delay: 7s; animation-duration: 15s; }
+.bubbles img:nth-child(1) { left: 5%; width: 35px; animation-delay: 0s; animation-duration: 10s; }
+.bubbles img:nth-child(2) { left: 18%; width: 45px; animation-delay: 3s; animation-duration: 13s; }
+.bubbles img:nth-child(3) { left: 32%; width: 40px; animation-delay: 6s; animation-duration: 11s; }
+.bubbles img:nth-child(4) { left: 50%; width: 45px; animation-delay: 1s; animation-duration: 14s; }
+.bubbles img:nth-child(5) { left: 72%; width: 35px; animation-delay: 4s; animation-duration: 12s; }
+.bubbles img:nth-child(6) { left: 88%; width: 40px; animation-delay: 7s; animation-duration: 15s; }
 
 
 

@@ -83,7 +83,7 @@
   display: inline-block;
   margin-top: 10px;
   padding: 10px 15px;
-  background: linear-gradient(90deg, #00ff7f, #00bfff);
+  background: #ff5733;
   color: white;
   border-radius: 6px;
   text-decoration: none;
@@ -93,9 +93,11 @@
 }
 
 .project-btn:hover {
-  background: linear-gradient(90deg, #00bfff, #00ff7f);
-  box-shadow: 0px 5px 15px rgba(0, 255, 127, 0.5);
+  background-color: #e14d2a;
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(255, 87, 51, 0.7);
 }
+
 
 /* Responsive Typography */
 @media (max-width: 768px) {

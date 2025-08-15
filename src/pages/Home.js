@@ -1,11 +1,13 @@
 import React from 'react';
 import '../pages/home.css';
 import html from '../assets/html.webp';
-import cs from '../assets/cs.png';
+import css from '../assets/css.png';
 import javascript from '../assets/javascript.png';
 import node from '../assets/node.png';
 import express from '../assets/express.png';
-import canva from '../assets/canva.png';
+import canva from '../assets/canva.webp';
+import react1 from '../assets/react1.png';
+
 
 
 
@@ -17,11 +19,13 @@ const Home = () => {
       {/* Bubble images */}
       <div className='bubbles'>
         <img src={html} alt="bubble" />
-        <img src={cs} alt="bubble" />
+        <img src={css} alt="bubble" />
         <img src={javascript} alt="bubble" />
         <img src={node} alt="bubble" />
         <img src={express} alt="bubble" />
         <img src={canva} alt="bubble" />
+        <img src={react1} alt="bubble" />
+       
         
       </div>
 

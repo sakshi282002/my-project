@@ -4,7 +4,8 @@ import cafe from '../assets/cafe.png';
 import food from '../assets/food.png';
 import cal from '../assets/cal.png';
 import weather from '../assets/weather.png';
-
+import todo from '../assets/todo.png';
+import gallery from '../assets/gallery.png';
 const projectsData = [
   {
     title: "Simple Cafe Project",
@@ -31,16 +32,16 @@ const projectsData = [
     link: "https://cloud-jet-nine.vercel.app/"
   },
   {
-    title: "",
-    description: "Frontend design for an e-commerce store built with HTML, CSS, and React.",
-    image: "",
-    link: "#"
+    title: "Simple Todo App",
+    description: "A simple and responsive To-Do List app built with HTML, CSS, and JavaScript Features task addition, deletion, and completion tracking for daily productivity.",
+    image: todo,
+    link: "https://todoapp-eight-chi.vercel.app/"
   },
   {
-    title: "",
-    description: "Frontend design for an e-commerce store built with HTML, CSS, and React.",
-    image: "",
-    link: "#"
+    title: "Simple gallery design",
+    description: "Built a lightweight image gallery using HTML and CSS with a neat, grid-based layout.",
+    image: gallery,
+    link: "https://gallery-neon-seven.vercel.app/"
   },
 
  
